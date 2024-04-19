@@ -1,10 +1,10 @@
 import "./App.css";
-import { Register } from "./components/Register";
+import { ListaProductos } from "./pages/ListaProductos";
 function App() {
   return (
     <>
       <div className="container">
-        <Register></Register>
+        <ListaProductos></ListaProductos>
       </div>
     </>
   );
