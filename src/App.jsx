@@ -1,10 +1,10 @@
 import "./App.css";
-import Counter from "./components/Contador";
+import { Register } from "./components/Register";
 function App() {
   return (
     <>
       <div className="container">
-        <Counter></Counter>
+        <Register></Register>
       </div>
     </>
   );

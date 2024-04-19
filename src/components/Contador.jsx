@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Login } from "./Login";
 function Counter() {
-  const [contador, setContador] = useState(0);
+  const [contador, setContador] = useState(() => {
+    const valorGuardado = localStorage.getItem("contador");
+    return valorGuardado ? parseInt(valorGuardado) : 0;
+  });
+
+  
   const [inputValue, setInputValue] = useState("");
   const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("contador", contador.toString());
+  }, [contador]);
 
   const sumar = () => {
     setContador(contador + 1);
